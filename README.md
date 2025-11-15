@@ -31,7 +31,7 @@ Une application Node.js CRUD complète pour gérer des tâches avec MongoDB et E
 
 ```bash
 # 1. Clone le projet
-cd learnCRUD_InNodejs
+cd TodoWeb-CientServeur-CRUD
 
 # 2. Installe les dépendances
 npm install
