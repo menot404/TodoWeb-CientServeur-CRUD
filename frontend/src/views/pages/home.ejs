@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>📝 Gestionnaire de Tâches</h1>
+  <h1><i class="fas fa-list-check"></i> Gestionnaire de Tâches</h1>
 
-  <a href="/app/v1/forms/add" class="btn btn-primary">➕ Nouvelle tâche</a>
+  <a href="/app/v1/forms/add" class="btn btn-primary"><i class="fas fa-plus"></i> Nouvelle tâche</a>
 
   <div class="tasks-list">
     <% if (tasks.length === 0) { %>
@@ -27,7 +27,8 @@
             class="btn-icon"
             title="Marquer comme <%= task.completed ? 'non complété' : 'complété' %>"
           >
-            <%= task.completed ? '↩️' : '✓' %>
+            <i class="<%= task.completed ? 'fas fa-undo' : 'fas fa-check' %>"
+                style="color: <%= task.completed ? '#ffc107' : '#28a745' %>"></i>
           </button>
         </form>
 
@@ -35,7 +36,7 @@
           href="/app/v1/forms/edit/<%= task._id %>"
           class="btn-icon"
           title="Modifier"
-          >✏️</a
+          ><i class="fas fa-edit"></i></a
         >
 
         <form
@@ -45,7 +46,7 @@
           onsubmit="return confirm('Supprimer cette tâche ?');"
         >
           <button type="submit" class="btn-icon btn-danger" title="Supprimer">
-            🗑️
+            <i class="fas fa-trash"></i>
           </button>
         </form>
       </div>
