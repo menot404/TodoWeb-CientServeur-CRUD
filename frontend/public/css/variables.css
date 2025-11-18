@@ -1,0 +1,85 @@
+/* ===================== THÈME CLAIR (PAR DÉFAUT) ===================== */
+:root {
+    /* Anciennes variables (backward compatibility) */
+    --color-background: #f0f0f0;
+    --color-text: #333333;
+    --color-primary: #4F2783;
+    --color-secondary: #ff9800;
+    --color-accent: #2196F3;
+    --color-border: #dddddd;
+    
+    /* Nouvelles variables de thème */
+    --primary: #4F2783;
+    --primary-light: #7A4BA0;
+    --primary-dark: #3A1F5C;
+    --secondary: #ff9800;
+    --secondary-light: #ffb333;
+    --secondary-dark: #e68900;
+    --warning: #FFA500;
+    --success: #4CAF50;
+    --danger: #FF6B6B;
+    --info: #2196F3;
+    
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #f0f2f5;
+    
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    
+    --border-color: #e0e0e0;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    --switch-bg: #e0e0e0;
+    --switch-border: #d0d0d0;
+    
+    --input-bg: #f8f9fa;
+    --input-border: #d0d0d0;
+    --input-focus: #f0f2f5;
+}
+
+/* ===================== THÈME SOMBRE ===================== */
+:root[data-theme="dark"] {
+    /* Anciennes variables (backward compatibility) */
+    --color-background: #121212;
+    --color-text: #e0e0e0;
+    --color-primary: #9D7FD9;
+    --color-secondary: #FFB74D;
+    --color-accent: #64B5F6;
+    --color-border: #333333;
+    
+    /* Nouvelles variables de thème */
+    --primary: #9D7FD9;
+    --primary-light: #B5A0E0;
+    --primary-dark: #6B4FB3;
+    --secondary: #FFB74D;
+    --secondary-light: #FFC97F;
+    --secondary-dark: #FF9800;
+    --warning: #FFA500;
+    --success: #81C784;
+    --danger: #FF8A8A;
+    --info: #64B5F6;
+    
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3a3a3a;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-tertiary: #b0b0b0;
+    
+    --border-color: #404040;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    --switch-bg: #404040;
+    --switch-border: #505050;
+    
+    --input-bg: #2d2d2d;
+    --input-border: #404040;
+    --input-focus: #3a3a3a;
+}

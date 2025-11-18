@@ -1,0 +1,164 @@
+/* ==================== SWITCH DE THÈME ==================== */
+
+/* Conteneur du switch */
+.theme-switch-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+/* Label du switch */
+.theme-switch-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+/* Styling du checkbox (caché visuellement) */
+.theme-switch-input {
+    display: none;
+}
+
+/* Styling du switch visuel */
+.theme-switch-slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: var(--switch-bg);
+    border: 2px solid var(--switch-border);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Cercle mobile du switch */
+.theme-switch-slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône du switch */
+.theme-switch-icon {
+    position: absolute;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease;
+}
+
+/* Icône moon (caché par défaut) */
+.theme-switch-icon.moon {
+    left: 6px;
+    opacity: 0;
+    color: var(--primary);
+}
+
+/* Icône sun (visible par défaut) */
+.theme-switch-icon.sun {
+    right: 6px;
+    opacity: 1;
+    color: var(--warning);
+}
+
+/* État du switch quand il est activé (dark mode) */
+.theme-switch-input:checked + .theme-switch-slider {
+    background-color: var(--primary);
+    border-color: var(--primary-dark);
+}
+
+/* Cercle du switch en dark mode */
+.theme-switch-input:checked + .theme-switch-slider::before {
+    left: 26px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(79, 39, 131, 0.4);
+}
+
+/* Icône moon visible en dark mode */
+.theme-switch-input:checked + .theme-switch-slider .moon {
+    opacity: 1;
+}
+
+/* Icône sun caché en dark mode */
+.theme-switch-input:checked + .theme-switch-slider .sun {
+    opacity: 0;
+}
+
+/* Hover effect */
+.theme-switch-slider:hover {
+    box-shadow: 0 0 8px rgba(79, 39, 131, 0.3);
+    border-color: var(--primary);
+}
+
+/* Focus effect (accessibility) */
+.theme-switch-input:focus + .theme-switch-slider {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Animation au changement */
+@keyframes switchPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(79, 39, 131, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(79, 39, 131, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 39, 131, 0);
+    }
+}
+
+.theme-switch-slider:active {
+    animation: switchPulse 0.6s ease-out;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+    .theme-switch-container {
+        gap: 8px;
+    }
+    
+    .theme-switch-slider {
+        width: 44px;
+        height: 22px;
+    }
+    
+    .theme-switch-slider::before {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .theme-switch-input:checked + .theme-switch-slider::before {
+        left: 24px;
+    }
+    
+    .theme-switch-label {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-switch-container {
+        gap: 6px;
+    }
+    
+    .theme-switch-label {
+        display: none;
+    }
+}
